@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+a{	text-decoration: none;
+	color: black;
+}
+
+footer{
+	 display: flex;
+	 position: fixed;
+	 background: black
+	 bottom: 0px;
+}
+
+ul{
+	text-decoration: none;
+	color: black;
+}
+#grilla{
+	display: grid;
+	grid-template-areas: 
+	
+	"header header header"
+	"Menu2 Menu2 Menu2"
+	"publi productos productos"
+	"footer footer footer"
+	"nav nav nav"
+	;
+	grid-template-columns: auto;
+	grid-template-rows: auto;
+	}
+
+.LogoTipoInicio{
+	margin: 0;
+	padding: 0;
+	width: 10rem;
+	border-radius: 10px;
+}
+
+.bordesMenuNav{
+	text-align: center;
+	align-items: center;
+	border-radius: 20px 0 0 20px; 
+	background: linear-gradient(to right,grey 0%, white 100%);
+	padding: 0;
+	color: black;
+	font-family: Indie Flower;
+	letter-spacing: 2px;
+	text-decoration: none;
+	font-size: 20px;
+	}
+	.bordesMenuNav{
+		transform: scale3d(1.2, 1.2, 1.2);
+	}
+
+	.botonLogin{
+		display: flex;
+		position: fixed;
+		top: 10px;
+		right: 15px;
+		border: solid #18a2a9;
+		background: transparent;
+		text-align: center;
+		color: white;
+		font-size: 18px;
+		padding: 5px 10px;
+		width: 90px;
+		height: 40px;
+		}
+	.botonLogin:hover{
+		background: #096957;
+	}
+	.buscador{
+		display: flex;
+		position: fixed;
+		top: 10px;
+		right: 120px;
+	}
+
+	.fondoHeader{
+		width: 100%;
+		background: black;
+	}
+
+	.pad{
+		padding: 0px;
+	}
+
+	.Fijar{
+		display: flex;
+		position: fixed;
+		width: 100%;
+	}
+	/*
+	.RedesSociales{
+		display: flex;
+		flex-direction: row;
+		top: 150px;
+		height: 40px;
+		width: 40px;
+		margin: 10px;
+	}
+	*/
+
+	.ListaEnFila{
+		display: flex;
+		position: fixed;
+		flex-direction: row;
+			}
+
+	.TamañoEspecialFoot{
+		display: flex;
+		position: fixed;
+		padding-bottom: 10px;
+	}
+
+
+.Redes2{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	position: fixed;
+	flex-direction: row;
+	text-decoration: none;
+	grid-area: footer;
+	bottom: 0px;
+}
+.Redes{
+	display: flex;
+	flex-direction: row;
+	bottom: 0px;
+	left: 0px;
+	height: 60px;
+	width: 60px;
+	border-radius: 20px;
+	margin: 10px;
+}
+
+.Redes:hover{
+	transform: scale(1.8);
+	
+	margin: 20px;
+
+}
+
+.ModalEstilo{
+	margin-top: 20px;
+	background: black;
+	border: solid red;
+}

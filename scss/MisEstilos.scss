@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import "variables";
+
+/*aca puse mixin*/
+
+@mixin centrar{
+	text-align: center;
+	align-items: center;
+}
+
+@mixin sinbordes{
+	margin: 0px;
+	padding: 0px;
+}
+
+@mixin flexfixed{
+	display: flex;
+	position: fixed;
+}
+
+@mixin banner($minimo,){
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: center;
+	min-height: $minimo;
+	height: $alto;
+	background-image: $imagen;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin-top: 60px;
+	padding: 0 20px;
+	color: white;
+}
+
+
+/*aca declaraciones especificas*/
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+footer{
+	 display: flex;
+	 position: fixed;
+	 background: black;
+	 bottom: 0px;
+}
+
+ul{
+	text-decoration: none;
+	color: red;
+	li{
+		background-color: transparent;
+	}
+}
+
+h1{
+	;
+}
+/*operad sizes*/
+$sizes: 1em, 2em, 5em, 10em;
+@each $size in $sizes{
+	.fontsize-#{$size}{
+		font-size: $size;
+	}
+}
+
+/*familys*/
+$font-family: (
+	"Anton" : 20px,
+	"Indie Flower": 25px 
+	);
+@each $key, $val in $font-family{
+	.type-#{$key}{
+		font-size: $val;
+	}
+}
+
+
+
+div{
+	margin:auto;
+	a{
+		text-decoration: none;
+		color: black;
+	}
+}
+
+div .modal-body{
+	p{
+		color:black;
+		font-size: 30px;
+		font-family: $anton;
+	}
+}
+
+
+div{
+	p{
+		color:Red;
+		font-family: $anton;
+		font-size: $fuente;
+	}
+}
+
+
+
+
+body{
+		font-family: $anton;
+		font-size: 25px;
+		background-image: url('../images/galaxia.jpg');
+		background-size: cover;
+		color:white;
+}
+
+
+
+/*aca puse clases*/
+
+
+#grilla{
+	display: grid;
+	grid-template-areas: 
+	"header header header"
+	"Menu2 Menu2 Menu2"
+	"publi productos productos"
+	"footer footer footer"
+	"nav nav nav";
+	grid-template-columns: auto;
+	grid-template-rows: auto;
+}
+
+.banner{
+	@include banner (300px);			
+}
+
+.LogoTipoInicio{
+	@include sinbordes;
+	width: 10rem;
+	border-radius: 10px;
+
+}
+
+.bordesMenuNav{
+	@include centrar;
+	border-radius: 20px 0 0 20px; 
+	background: linear-gradient(to right,grey 0%, white 100%);
+	padding: 0;
+	color: black;
+	font-family: $indie;
+	letter-spacing: 2px;
+	text-decoration: none;
+	font-size: 20px;
+	transform: scale3d(1.2, 1.2, 1.2);
+	}
+
+.botonLogin{
+	@include flexfixed;
+	top: $var10;
+	right: 15px;
+	border: solid #18a2a9;
+	background: transparent;
+	@include centrar;
+	color: red;
+	font-size: 18px;
+	padding: 5px $var10;
+	width: 90px;
+	height: 40px;
+	&:hover{
+		background: #096957;
+	}
+}
+
+.boxEsp2{
+	width: 800px;
+	height: 300px;
+}
+
+.buscador{
+	@include flexfixed;
+	top: $var10;
+	right: 120px;
+}
+
+	
+.fondoHeader{
+	width: 100%;
+	background: black;
+}
+
+.pad{
+	padding: 0px;
+}
+
+.Fijar{
+	@include flexfixed;
+	width: 100%;
+}
+
+.ListaEnFila{
+	@include flexfixed;
+	flex-direction: row;
+}
+
+
+
+.TamañoEspecialFoot{
+	@include flexfixed;
+	padding-bottom: $var10;
+}
+
+.Redes2{
+	@include sinbordes;
+	@include flexfixed;
+	flex-direction: row;
+	text-decoration: none;
+	grid-area: footer;
+	bottom: 0px;
+}
+
+
+.Redes{
+	display: flex;
+	flex-direction: row;
+	bottom: 0px;
+	left: 0px;
+	height: 60px;
+	width: 60px;
+	border-radius: 20px 2px 20px;
+	margin: $var10;
+	&:hover{
+	transform: scale(1.8);
+	margin: 20px;
+	}
+}
+
+.Modabot{
+	background: black;
+	border: solid red;
+	}
+
+.ModalEstilo{
+	margin-top: 20px;
+	background: black;
+	border: solid red;
+	border-radius:20px;
+	transform: translate($var10, $var10);
+	&:hover{
+		transform: scale(1.2);
+	}
+	}
+
+
+/*aca puse algunas transiciones*/
+button {
+   animation-duration: 2s;
+   animation-name: aparecer;
+}
+
+@keyframes aparecer {
+   0% {
+     opacity: 0;
+   }
+   25%{
+   	transform: scale(1.5);
+   }
+   50%{
+   		opacity: 1;
+   }
+   75%{
+   	opacity: 0;
+   }
+   100% {
+     opacity: 1;
+   }
+}
+
+footer{
+	animation-duration: 2s;
+	animation-name: zoom;
+	bottom: 0px;
+	@include flexfixed;
+}
+
+@keyframes zoom {
+	0%{
+		transform: scale(1.4);
+	}
+	50%{
+		transform: scale(1);
+	}
+	
+	100%{
+		transformw: scale(1.2);
+	}
+}

@@ -1,0 +1,272 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+/*aca puse mixin*/
+/*aca declaraciones especificas*/
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+footer {
+  display: flex;
+  position: fixed;
+  background: black;
+  bottom: 0px;
+}
+
+ul {
+  text-decoration: none;
+  color: red;
+}
+
+ul li {
+  background-color: transparent;
+}
+
+/*operad sizes*/
+.fontsize-1em {
+  font-size: 1em;
+}
+
+.fontsize-2em {
+  font-size: 2em;
+}
+
+.fontsize-5em {
+  font-size: 5em;
+}
+
+.fontsize-10em {
+  font-size: 10em;
+}
+
+/*familys*/
+.type-Anton {
+  font-size: 20px;
+}
+
+.type-Indie Flower {
+  font-size: 25px;
+}
+
+div {
+  margin: auto;
+}
+
+div a {
+  text-decoration: none;
+  color: black;
+}
+
+div .modal-body p {
+  color: black;
+  font-size: 30px;
+  font-family: anton;
+}
+
+div p {
+  color: Red;
+  font-family: anton;
+  font-size: 70px;
+}
+
+body {
+  font-family: anton;
+  font-size: 25px;
+  background-image: url("../images/galaxia.jpg");
+  background-size: cover;
+  color: white;
+}
+
+/*aca puse clases*/
+#grilla {
+  display: grid;
+  grid-template-areas: "header header header" "Menu2 Menu2 Menu2" "publi productos productos" "footer footer footer" "nav nav nav";
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  min-height: 300px;
+  height: 350px;
+  background-image: url(../images/bann.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 60px;
+  padding: 0 20px;
+  color: white;
+}
+
+.LogoTipoInicio {
+  margin: 0px;
+  padding: 0px;
+  width: 10rem;
+  border-radius: 10px;
+}
+
+.bordesMenuNav {
+  text-align: center;
+  align-items: center;
+  border-radius: 20px 0 0 20px;
+  background: linear-gradient(to right, grey 0%, white 100%);
+  padding: 0;
+  color: black;
+  font-family: Indie Flower;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-size: 20px;
+  transform: scale3d(1.2, 1.2, 1.2);
+}
+
+.botonLogin {
+  display: flex;
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  border: solid #18a2a9;
+  background: transparent;
+  text-align: center;
+  align-items: center;
+  color: red;
+  font-size: 18px;
+  padding: 5px 10px;
+  width: 90px;
+  height: 40px;
+}
+
+.botonLogin:hover {
+  background: #096957;
+}
+
+.boxEsp2 {
+  width: 800px;
+  height: 300px;
+}
+
+.buscador {
+  display: flex;
+  position: fixed;
+  top: 10px;
+  right: 120px;
+}
+
+.fondoHeader {
+  width: 100%;
+  background: black;
+}
+
+.pad {
+  padding: 0px;
+}
+
+.Fijar {
+  display: flex;
+  position: fixed;
+  width: 100%;
+}
+
+.ListaEnFila {
+  display: flex;
+  position: fixed;
+  flex-direction: row;
+}
+
+.TamañoEspecialFoot {
+  display: flex;
+  position: fixed;
+  padding-bottom: 10px;
+}
+
+.Redes2 {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  position: fixed;
+  flex-direction: row;
+  text-decoration: none;
+  grid-area: footer;
+  bottom: 0px;
+}
+
+.Redes {
+  display: flex;
+  flex-direction: row;
+  bottom: 0px;
+  left: 0px;
+  height: 60px;
+  width: 60px;
+  border-radius: 20px 2px 20px;
+  margin: 10px;
+}
+
+.Redes:hover {
+  transform: scale(1.8);
+  margin: 20px;
+}
+
+.Modabot {
+  background: black;
+  border: solid red;
+}
+
+.ModalEstilo {
+  margin-top: 20px;
+  background: black;
+  border: solid red;
+  border-radius: 20px;
+  transform: translate(10px, 10px);
+}
+
+.ModalEstilo:hover {
+  transform: scale(1.2);
+}
+
+/*aca puse algunas transiciones*/
+button {
+  animation-duration: 2s;
+  animation-name: aparecer;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    transform: scale(1.5);
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+footer {
+  animation-duration: 2s;
+  animation-name: zoom;
+  bottom: 0px;
+  display: flex;
+  position: fixed;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1.4);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transformw: scale(1.2);
+  }
+}

@@ -1,0 +1,151 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import "variables";
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+h1{	
+	font-family: Bangers;
+	font-size: 70px;
+	color: white;
+	text-align: center;
+	letter-spacing: 5px;
+	word-spacing: 50px;
+}
+
+
+h2{	
+	font-family: Bangers;
+	font-size: 40px;
+	color: white;
+	text-align: center;
+	letter-spacing: 5px;
+	word-spacing: 50px;
+}
+
+h3{	
+	font-family: Bangers;
+	font-size: 25px;
+	color: white;
+	text-align: center;
+	letter-spacing: 5px;
+	word-spacing: 25px;
+}
+header{
+	background-color: Black;
+	margin: auto;
+	min-height: 150px;
+}
+
+body{
+		font-family: Anton;
+		font-size: 25px;
+		background-image: url('../images/galaxia.jpg');
+		background-size: cover;
+}
+
+ul{
+	background-color: transparent;
+}
+
+footer{
+	 display: flex;
+	 position: fixed;
+	 background: transparent;
+	 bottom: 0px;
+}
+p{
+	color: #16E611;
+}
+
+.Logo{
+	height: 150px;
+	width: 200px;
+}
+
+
+
+.bordesMenuNav{
+	color: red;
+	}
+.bordesMenuNav:hover{
+	transform: scale(1.4);
+	margin-left: 0px;
+	margin-right: 50px;
+	font-size: 35px;
+}
+.tamañobody{
+	display: flex;
+	justify-content: right;
+	width: 100%;
+	height: 100%;	
+}
+
+.centrar{
+	display: flex;
+	margin: auto;
+	
+}
+
+.izquierda{
+	display: flex;
+	margin: auto;
+	width: 40%;
+	font-size: 20px;
+	font-style: Anton;
+}
+
+
+
+.Redes{
+	display: flex;
+	flex-direction: row;
+	bottom: 0px;
+	left: 0px;
+	height: 60px;
+	width: 60px;
+	border-radius: 200px;
+	margin: 10px;
+}
+.Redes:hover{
+	transform: scale(1.8);
+	margin: 20px;
+}
+
+.Redes2{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	position: fixed;
+	flex-direction: row;
+	text-decoration: none;
+	bottom: 0px;
+}
+
+.productos{
+	width: 80%;
+	margin: auto;
+}
+.productos .boxProductos{
+	width: 30%;
+	float: left;
+	padding: 5px;
+	box-sizing: border-box;
+	color: white;
+	margin: auto;
+	margin: 100px auto;
+}
+.divSucursales{
+	height: 200px;
+	width: 200px;
+	margin: 10px 30px;
+}
+
+.espacioBot{
+	margin: 100px 30px;
+}
+

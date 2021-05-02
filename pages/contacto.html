@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contacto</title>
+	<link rel="stylesheet" type="text/css" href="../css/MisEstilos.css">
+</head>
+<body>
+	<header>	
+		<a href="../index.html"><img src="../images/O.S.E.png" alt="Inicio" class="LogoEspecial aaa111"></a>
+		<link rel="stylesheet" type="text/css" href="css/MisEstilos.css">
+	</header>
+
+	<h3>Formulario</h3>
+
+	<form action="recibe.html" method="POST"	class="AlterFondo">
+			<input type="text" name="campo_nombre" placeholder="Nombre" autocomplete="off" value="nombre"><br>
+			<input type="text" name="campo_apellido" placeholder="Apellido" autocomplete="off" value="apellido"><br>
+
+	<label>Sexo</label>
+			<select>
+				<option value="m">M</option>
+				<option value="f">F</option>
+			</select ><br>
+
+			<input type="tel" name="campo_telefono" placeholder="+11-1111-1111" autocomplete="off" value="telefono"><br>
+			<input type="email" name="campo_email" placeholder="Fulanito@gmail.com" autocomplete="off" value="email"><br>
+
+			<textarea name="campo_area" placeholder="Mensaje"></textarea> <br>
+
+	<div>
+
+			<p>que le parecio la atencion?</p>
+				<input type="radio" name="atencion" id="Buena" value="Buena" checked="Buena">
+					<label for="Buena">Buena</label>
+				<input type="radio" name="atencion" id="Intermedia" value="Intermedia">
+					<label for="Intermedia">Intermedia</label>
+				<input type="radio" name="atencion" id="mala" value="mala">
+					<label for="mala">mala</label>	
+	</div>
+
+			<input type="submit" name="enviar"	value="ENVIAR">
+			<input type="reset" name="" value="Borrar">
+
+	</form>
+</body>
+</html>
